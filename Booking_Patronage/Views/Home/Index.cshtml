@@ -1,0 +1,24 @@
+﻿@model Booking_Patronage.ViewModels.HomeVM;
+
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+
+
+<h2>@Model.Tytul</h2>
+
+@foreach (var room in Model.Rooms)
+{
+    <div class="col-sm-4 col-lg-4 col-md-4">
+        <img src="@room.imgUrl" alt="" class="container-fluid" />
+        <div class="carousel-caption">
+            <h4>Max. pojemność:</h4>
+            <h3>@room.maxOverload</h3>
+            <h3>Nazwa: </h3>
+            <h3>@room.name - nr: @room.number</h3>
+            <h4>Pietro: @room.floor</h4>
+            <p>Info: @room.inforamtion</p>
+        </div>
+    </div>
+}
